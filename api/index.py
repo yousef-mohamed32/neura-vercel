@@ -93,7 +93,8 @@ class handler(BaseHTTPRequestHandler):
             body = json.loads(self.rfile.read(content_length))
 
             if self.path == '/api/chat':
-                message = body.get('message', '').strip()
+               messages = body.get('messages', [])
+               message = messages[-1]['content'].strip() if messages else body.get('message', '').strip()
                 if not message:
                     self.send_json(400, {"error": "No message"})
                     return
