@@ -30,7 +30,7 @@ def call_gemini(system_prompt, messages):
         "contents": contents,
         "generationConfig": {"maxOutputTokens": 800, "temperature": 0.7}
     }
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
     try:
         req = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"}, method="POST")
         with urllib.request.urlopen(req, timeout=30) as resp:
