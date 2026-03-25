@@ -4,7 +4,7 @@ import re
 from http.server import BaseHTTPRequestHandler
 import urllib.request
 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyC5KqtJZR2gJKJLz9zzY4cLmgQcTjQFP5M")
 
 DOCTORS = [
     {"id": 1, "name": "Dr. Sara El-Masry", "spec": "Psychiatrist & CBT Therapist", "emoji": "👩‍⚕️", "tags": ["Anxiety", "Depression", "Trauma"], "rating": 4.9, "avail": "Tomorrow 10am"},
